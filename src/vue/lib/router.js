@@ -11,20 +11,31 @@ const router = new Router({
 	routes: [{
 		path: '/',
 		name: 'Start',
-		component: require('../component/page/Start')
-	},
-	{
-		path: '/about',
-		name: 'About',
-		component: require('../component/page/About')
+		component: require('../component/page/PageStart'),
+		meta: {
+			title: 'Beeldr VC Tool'
+		}
+	}, {
+		path: '/room',
+		name: 'Room',
+		component: require('../component/page/PageRoom'),
+		meta: {
+			title: 'Room'
+		},
+		children: [{
+			path: ':roomName',
+			name: 'PageRoom',
+			component: require('../component/page/PageRoom')
+		}]
 	}]
 })
 
-router.beforeEach((route, redirect, next) => {
+router.beforeEach((to, from, next) => {
+	const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title)
+	if (nearestWithTitle) document.title = nearestWithTitle.meta.title
 	next()
 })
 
-router.afterEach((to, from) => {
-})
+router.afterEach((to, from) => {})
 
 export default router

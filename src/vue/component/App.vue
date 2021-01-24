@@ -3,7 +3,7 @@
 		<header class="layout u-absolute">
 			<ul class="u-flex menu">
 				<li><router-link to="/">Home</router-link></li>
-				<li><router-link to="/about">About</router-link></li>
+				<li><router-link to="/room">Room</router-link></li>
 			</ul>
 		</header>
 		<img src="../../assets/logo.svg" id="logo" />
