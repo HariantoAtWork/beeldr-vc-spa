@@ -1,0 +1,38 @@
+.vp {
+	width: 100vw;
+	height: 100vh;
+
+	&-h {
+		height: 100vh;
+	}
+
+	&-w {
+		width: 100vw;
+	}
+
+	&-min {
+		min-width: 100vw;
+		min-height: 100vh;
+
+		&-h {
+			min-height: 100vh;
+		}
+
+		&-w {
+			min-width: 100vw;
+		}
+	}
+
+	&-max {
+		max-width: 100vw;
+		max-height: 100vh;
+
+		&-h {
+			max-height: 100vh;
+		}
+
+		&-w {
+			max-width: 100vw;
+		}
+	}
+}

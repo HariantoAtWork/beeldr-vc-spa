@@ -1,0 +1,3 @@
+@mixin for-only($min-px: 0px, $max-px: 599px) {
+	@media (min-width: $min-px) and (max-width: $max-px) { @content; }
+}
