@@ -10,13 +10,13 @@ const router = new Router({
 	linkActiveClass: 'active',
 	routes: [{
 		path: '/',
-		name: 'Hello',
-		component: require('../component/route/Hello')
+		name: 'Start',
+		component: require('../component/page/Start')
 	},
 	{
 		path: '/about',
 		name: 'About',
-		component: require('../component/route/About')
+		component: require('../component/page/About')
 	}]
 })
 

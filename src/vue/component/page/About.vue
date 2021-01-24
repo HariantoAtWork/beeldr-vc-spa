@@ -1,16 +1,16 @@
 <template>
-	<div class="hello">
+	<div class="page-about">
 		<h1>{{ msg }}</h1>
-		<h2>Go create something awesome.</h2>
+		<h2>About</h2>
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'hello',
-	data () {
+	name: 'PageAbout',
+	data() {
 		return {
-			msg: 'Hello world :)'
+			msg: 'Sylo Vue :)'
 		}
 	}
 }
@@ -18,7 +18,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
 	font-weight: normal;
 }
 

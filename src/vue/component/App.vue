@@ -1,26 +1,21 @@
 <template>
-<div id="app">
-	<header class="layout u-absolute">
-		<ul class="u-box menu">
-			<li><router-link to="/">Home</router-link></li>
-			<li><router-link to="/about">About</router-link></li>
-		</ul>
-	</header>
-	<img src="../../assets/logo.svg" id="logo">
-	<router-view></router-view>
-</div>
+	<div id="app">
+		<header class="layout u-absolute">
+			<ul class="u-flex menu">
+				<li><router-link to="/">Home</router-link></li>
+				<li><router-link to="/about">About</router-link></li>
+			</ul>
+		</header>
+		<img src="../../assets/logo.svg" id="logo" />
+		<router-view></router-view>
+	</div>
 </template>
 
 <script>
-import { sync } from 'vuex-router-sync'
-import store from '../services/store'
-import router from '../services/router'
-
-sync(store, router)
+import router from '../lib/router'
 
 export default {
 	name: 'App',
-	store,
 	router
 }
 </script>
