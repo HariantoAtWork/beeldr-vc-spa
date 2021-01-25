@@ -1,13 +1,12 @@
 <template>
-	<div id="app">
-		<header class="layout u-absolute">
+	<div id="app" class="u-flex u-flex--column">
+		<header>
 			<ul class="u-flex menu">
 				<li><router-link to="/">Home</router-link></li>
 				<li><router-link to="/room">Room</router-link></li>
 			</ul>
 		</header>
-		<img src="../../assets/logo.svg" id="logo" />
-		<router-view></router-view>
+		<router-view class="u-flex-cell content"></router-view>
 	</div>
 </template>
 
@@ -28,10 +27,9 @@ body {
 	font-family: 'Artifika', serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	border-top: 1px dashed #2cb5e8;
-	padding-top: 40px;
 	position: relative;
+	// min-height: 100vh;
+	overflow: hidden;
 }
 
 .menu {
@@ -59,6 +57,7 @@ body {
 #app {
 	text-align: center;
 	color: #2c3e50;
+	min-height: 100vh;
 	#logo {
 		width: 200px;
 	}
